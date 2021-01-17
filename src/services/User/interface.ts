@@ -1,3 +1,4 @@
+import User from "../../models/user.model";
 
 /**
  * @export
@@ -10,4 +11,31 @@ export interface IUserService {
      * @memberof IUserService
      */
     findAll(): Promise<any[]>;
+
+    /**
+     * @returns {Promise<boolean>}
+     * @memberof IUserService
+     */
+    create(User: User): Promise<User>;
+
+    /**
+     * @returns {Promise<any[]>}
+     * @memberof IUserService
+     */
+    update(User: User, id: number): Promise<boolean>;
+
+    /**
+     * @returns {Promise<any[]>}
+     * @memberof IUserService
+     */
+    destroy(id: number): Promise<boolean>;
+
+    /**
+     * @returns {Promise<any[]>}
+     * @memberof IUserService
+     */
+    getById(id: number): Promise<User | null>;
+
+
+
 }

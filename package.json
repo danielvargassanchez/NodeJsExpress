@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "start": "tsc && node ./build/config/server/index.js",
+    "start": "tsc && node ./build/src/config/server/index.js",
     "test": "mocha --exit",
     "coverage": "nyc mocha --exit",
     "tsc": "tsc"

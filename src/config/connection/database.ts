@@ -1,4 +1,4 @@
-import {Sequelize} from 'sequelize-typescript';
+import { Sequelize } from 'sequelize-typescript';
 import config from '../env/index';
 import * as path from 'path';
 
@@ -10,5 +10,8 @@ export const db = new Sequelize({
     password: config.database.DB_PASSWORD,
     database: config.database.DB_NAME,
     storage: config.database.DB_STORAGE,
+    dialectOptions: {
+        ssl: true
+    },
     models: [path.join(__dirname, '../../models')]
 });

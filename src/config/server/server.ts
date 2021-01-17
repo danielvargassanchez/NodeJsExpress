@@ -20,11 +20,11 @@ Routes.init(app);
 
 // initialize db
 db.authenticate()
-.then(() => {
-    console.log('Connected to Database');
-    db.sync();
-})
-.catch(err => console.error('Error connecting database', err))
+    .then(() => {
+        console.log('Connected to Database');
+        db.sync();
+    })
+    .catch(err => console.error('Error connecting database', err))
 
 /**
  * @constructs express.Application Error Handler
